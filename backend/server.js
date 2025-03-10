@@ -15,7 +15,7 @@ import { connectDB } from "./lib/db.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
 
@@ -37,6 +37,7 @@ if (process.env.NODE_ENV === "prodcution") {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
   });
 }
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
